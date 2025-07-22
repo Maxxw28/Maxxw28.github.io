@@ -18,6 +18,11 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
 }
 
 main {
@@ -33,12 +38,23 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 1em;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 section img {
     max-width: 100%;
     border-radius: 10px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
 }
 
 footer {
@@ -49,4 +65,24 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    main {
+        padding: 1em;
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        position: static;
+    }
 }
