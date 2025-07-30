@@ -19,7 +19,7 @@ export const ThemedComponent = () => {
 
 	return (
 		<div style={style}>
-			<h1>Welcome to the Refactored App!</h1>
+			<h1>Welcome to the Demo App!</h1>
 			<p>
 				The current theme is: <strong>{theme}</strong>
 			</p>
